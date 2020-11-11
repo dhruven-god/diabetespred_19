@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <style>
+
+        </style>
+        <title>Diabetes Predictor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}" type="text/css" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <!-- Website Title -->
+        <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> ☰ </button>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <h3> Diabetes Predictor </h3>
+
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li>
+                            <a href="https://www.linkedin.com/in/dhruven-god/" class="nav-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/dhruven-god" class="nav-link"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+  
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{% url 'predict' %}"  method="POST">
+            {% csrf_token %}
+            <label for="preganancies">No. of Preganancies </label>
+            <input class="form-input" type="text" name="pregnancies" placeholder="eg. 4"><br>
+            <label for="glucose">Amount of Glucose </label>
+            <input class="form-input" type="text" name="glucose" placeholder=" in (mg/dL)"><br>
+            <label for="bloodpressure">Blood-pressure </label>
+            <input class="form-input" type="text" name="bloodpressure" placeholder="in (mm Hg) eg. 40"><br>
+            <label for="skinthickness">Skin Thickness  </label>
+            <input class="form-input" type="text" name="skinthickness" placeholder="in (mm) eg. 20"><br>
+            <label for="insulin">Insulin Level</label>
+            <input class="form-input" type="text" name="insulin" placeholder="in (IU/mL) eg. 80"><br>
+            <label for="bmi">Body mass Index </label>
+            <input class="form-input" type="text" name="bmi" placeholder="in (kg/(height in m²)) eg. 23.1"><br>
+            <label for="dpf">Diabetes pedegree function </label>
+            <input class="form-input" type="text" name="dpf" placeholder="eg. 0.351"><br>
+            <label for="age">Age of the person </label>
+            <input class="form-input" type="text" name="age" placeholder="in (years) eg. 34"><br>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        	</form> 
+            <div class="footer-dark">
+                <footer>
+                        <p class="copyright">© Dhruven Lincoln 2020</p>
+                    </div>
+                </footer>
+            </div>
+
+    </body>
+    <script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </script>
+</html>
