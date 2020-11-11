@@ -4,7 +4,7 @@ import numpy as np
 
 import pickle
 
-predictor = pickle.load(open('C:\\Users\\dhruven\\Desktop\\Publish\\DiabetesPred\\myapp', 'rb'))  
+predictor = pickle.load(open('C:/Users/dhruven/Desktop/Publish/DiabetesPred/myapp/model.pkl', 'rb'))  
 
 # Create your views here.
 def index(request):
