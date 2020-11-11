@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class FirstpageConfig(AppConfig):
-    name = 'firstpage'
+class MyappConfig(AppConfig):
+    name = 'myapp'
