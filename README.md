@@ -1,7 +1,6 @@
 # Diabetespred_19
 A Simple Machine Learning App that predicts whether the person is diabetic or not, based on Pima Indians Diabetes Dataset given on kaggle
-Diabetes Prediction - Deployment
-Kaggle Python 3.6 scikit-learnn
+Diabetes Prediction 
 
 • This repository consists of files required to deploy a Machine Learning Web App created with Django on Heroku platform.
 
