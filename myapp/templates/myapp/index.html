@@ -42,7 +42,7 @@
     	<div class="ml-container">
     		<form action="{% url 'predict' %}"  method="POST">
             {% csrf_token %}
-            <label for="preganancies">No. of Preganancies </label>
+            <label for="pregnancies">No. of Pregnancies </label>
             <input class="form-input" type="text" name="pregnancies" placeholder="eg. 4"><br>
             <label for="glucose">Amount of Glucose </label>
             <input class="form-input" type="text" name="glucose" placeholder=" in (mg/dL)"><br>
