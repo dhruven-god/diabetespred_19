@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import numpy as np
-
+import os
+#from diabetespred.settings import BASE_DIR
 import pickle
 
-predictor = pickle.load(open('C:/Users/dhruven/Desktop/Publish/DiabetesPred/myapp/model.pkl', 'rb'))  
+CURRENT_DIR = os.path.dirname(__file__)
+model_file = os.path.join(CURRENT_DIR, 'model.pkl')
+#print(CURRENT_DIR)
+
+predictor = pickle.load(open(model_file, 'rb'))  
 
 # Create your views here.
 def index(request):
